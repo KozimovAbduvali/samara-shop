@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.underline-animation::after {
+  content: '';
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+  background-color: rgb(220 38 38);
+  @apply absolute w-full h-0.5 bottom-0 left-0 rounded-t-full
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.button-animation {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-out;
+}
+
+.button-animation::before {
+  content: '';
+  transition: width 0.3s ease-out;
+  @apply bg-[#ff2929] absolute w-0 h-full z-0 -translate-x-1/2 left-1/2 top-0
+}
+
+.button-animation:hover::before {
+  width: 100%;
+}
+
+.button-animation:hover {
+  color: white;
+}
+
+.button-animation > span {
+  position: relative;
+  z-index: 1;
+}
+
+
+.mySwiper {
+  @apply w-full h-full;
+}
+
+.swiper-slide {
+  @apply flex justify-center items-center text-center text-lg bg-white h-full;
+}
+
+.swiper-slide img {
+  @apply block w-full h-full object-cover;
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+  @apply !bg-red-500 !size-12 rounded-full
+}
+
+.swiper-button-prev::after ,
+.swiper-button-next::after  {
+  @apply hidden
+}
+
