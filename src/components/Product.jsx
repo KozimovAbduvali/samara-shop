@@ -20,6 +20,24 @@ const productsData = [
     description: 'OXI – Fresh mahsulotlari KATALOGI va NARXLARI',
     image: 'https://backoffice.samarashop.uz/media/Category/sayt_uchun_oxi_F1PgT2g.jpg',
   },
+  {
+    id: 1,
+    title: 'Samara',
+    description: 'SAMARA brendi mahsulotlari KATALOGI va NARXLARI',
+    image: 'https://backoffice.samarashop.uz/media/Category/samara_sayt_uchun_G403N7E.jpg',
+  },
+  {
+    id: 2,
+    title: 'Aksoy',
+    description: 'Aksoy suvlari va narxlari bilan tanishing',
+    image: 'https://backoffice.samarashop.uz/media/Category/aksoy2.jpg',
+  },
+  {
+    id: 3,
+    title: 'OXI - Fresh',
+    description: 'OXI – Fresh mahsulotlari KATALOGI va NARXLARI',
+    image: 'https://backoffice.samarashop.uz/media/Category/sayt_uchun_oxi_F1PgT2g.jpg',
+  },
 ];
 
 const Products = () => {
@@ -40,7 +58,7 @@ const Products = () => {
       <p className="text-center text-gray-500 mb-10">Quyidagi bo'limlardan birini tanlang</p>
       <div className="grid items-center md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-20 lg:gap-24 text-center px-4 md:px-10 mt-4 md:mt-8">
         {loading
-          ? Array.from(new Array(3)).map((_, index) => (
+          ? Array.from(new Array(6)).map((_, index) => (
               <div key={index} className="bg-white flex flex-col justify-between items-center drop-shadow-xl rounded-lg overflow-hidden p-2.5 pb-6 w-[278px] min-h-[400px]">
                 <div className='aspect-[278/248] w-full h-[248px] overflow-hidden rounded-xl'>
                   <Skeleton variant="rectangular" width="100%" height="100%" />
