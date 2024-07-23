@@ -45,11 +45,10 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Simulate a data fetch
     setTimeout(() => {
       setProducts(productsData);
       setLoading(false);
-    }, 2000); // 2 seconds delay for demonstration
+    }, 2000);
   }, []);
 
   return (
@@ -59,7 +58,7 @@ const Products = () => {
       <div className="grid items-center md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-20 lg:gap-24 text-center px-4 md:px-10 mt-4 md:mt-8">
         {loading
           ? Array.from(new Array(6)).map((_, index) => (
-              <div key={index} className="bg-white flex flex-col justify-between items-center drop-shadow-xl rounded-lg overflow-hidden p-2.5 pb-6 w-[278px] min-h-[400px]">
+              <div key={index} className="bg-white flex flex-col justify-between items-center drop-shadow-xl rounded-lg overflow-hidden p-2.5 pb-6 w-full min-h-[400px]">
                 <div className='aspect-[278/248] w-full h-[248px] overflow-hidden rounded-xl'>
                   <Skeleton variant="rectangular" width="100%" height="100%" />
                 </div>
@@ -71,7 +70,7 @@ const Products = () => {
               </div>
             ))
           : products.map(product => (
-              <div key={product.id} className="bg-white flex flex-col justify-between items-center drop-shadow-xl rounded-lg overflow-hidden p-2.5 pb-6 w-[278px] min-h-[400px]">
+              <div key={product.id} className="bg-white flex flex-col justify-between items-center drop-shadow-xl rounded-lg overflow-hidden p-2.5 pb-6 w-full min-h-[400px]">
                 <div className='aspect-[278/248] w-full h-[248px] overflow-hidden rounded-xl'>
                   <img
                     src={product.image}
